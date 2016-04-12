@@ -1,0 +1,15 @@
+INSERT INTO price_precious_metal (id,bid_time,gold_price,silver_price,platinum_price) VALUES (498,1460476980,125610.0,1610.0,99200.0)
+Traceback (most recent call last):
+  File "get_precious_metal_price.py", line 38, in <module>
+    cur.execute(sql)
+psycopg2.IntegrityError: duplicate key value violates unique constraint "price_precious_metal_pkey"
+DETAIL:  Key (id)=(498) already exists.
+
+.0,99200.0)
+INSERT INTO price_precious_metal (id,bid_time,gold_price,silver_price,platinum_price) VALUES (498,1460476980,125610.0,1610.0,99200.0)
+Traceback (most recent call last):
+  File "get_precious_metal_price.py", line 38, in <module>
+    cur.execute(sql)
+psycopg2.IntegrityError: duplicate key value violates unique constraint "price_precious_metal_pkey"
+DETAIL:  Key (id)=(498) already exists.
+

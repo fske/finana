@@ -7,12 +7,12 @@ import psycopg2
 target_list = ["Gold", "Silver", "Platinum"]
 conn = psycopg2.connect(database="test", user="root", password="d&kdz555", host="localhost", port="5432");
 cur = conn.cursor()
-cur.execute("SELECT MAX(id) FROM price_precious_metal")
+cur.execute("SELECT MAX(id)+1 FROM price_precious_metal")
 id = cur.fetchall()[0][0] or 1
 
 while True :
     timer = int(time.time()) 
-    if timer % 6 == 0 :
+    if timer % 60 == 0 :
         url = "http://m.kitco.com"
         wp = urllib2.urlopen(url)
         content = wp.read().replace("\r","").replace("\n", "").replace("\t","")
