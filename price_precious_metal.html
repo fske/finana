@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Streamgraph</title>
+<title>price of gold</title>
 <style>
 
 body {
@@ -21,11 +21,11 @@ button {
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-var n = 20, // number of layers
+var n = 1, // number of layers
     m = 200, // number of samples per layer
     stack = d3.layout.stack().offset("wiggle"),
     layers0 = stack(d3.range(n).map(function() { return bumpLayer(m); })),
-    layers1 = stack(d3.range(n).map(function() { return bumpLayer(m); }));
+    //layers1 = stack(d3.range(n).map(function() { return bumpLayer(m); }));
 
 var width = 960,
     height = 500;
