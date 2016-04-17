@@ -48,3 +48,4 @@ while True :
         cur.execute(sql);
         conn.commit();
         id = id + 1;
+    time.sleep(0.5);
