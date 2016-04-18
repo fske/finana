@@ -28,9 +28,10 @@ headers = [{'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9
 
 while True :
     timer = int(time.time());
+    print timer;
     if timer % 60 == 0 or status == 0 :
         request = urllib2.Request(url = url, headers = headers[(timer%13)%2]);
-        wp = urllib2.urlopen(request);
+        wp = urllib2.urlopen(request, timeout=3);
         content = wp.read().replace("\r","").replace("\n", "").replace("\t","");
         price_list = [];
         for target in target_list :
@@ -48,4 +49,5 @@ while True :
         cur.execute(sql);
         conn.commit();
         id = id + 1;
-    time.sleep(0.5);
+        print "gotten";
+    time.sleep(0.9);
